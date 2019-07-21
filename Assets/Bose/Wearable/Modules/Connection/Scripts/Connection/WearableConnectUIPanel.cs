@@ -136,7 +136,9 @@ namespace Bose.Wearable
 		private WearableControl _wearableControl;
 		private EventSystem _eventSystem;
 		private bool _didAttemptReconnect;
-
+        public GameObject video;
+        public GameObject cam;
+        public GameObject cam1; 
 		private const string CannotFindEventSystemWarning =
 			"[Bose Wearable] Cannot find an EventSystem. WearableConnectUIPanel will not detect any input.";
 
@@ -417,6 +419,9 @@ namespace Bose.Wearable
 
 			_isVisible = false;
 			_canvas.enabled = false;
+            video.SetActive(true);
+            cam.SetActive(true);
+            cam1.SetActive(false);
 			_canvasGroup.alpha = 0f;
 			if (_userDidOpen)
 			{

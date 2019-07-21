@@ -5,15 +5,18 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour {
 
     public AudioClip introSound;
-    
 
+    public GameObject soundsphere;
 
+    public AudioSource swoosh; 
     public AudioSource loopSound;
 
     //Play loop sound after intro
     IEnumerator delayPlay(float time){
         yield return new WaitForSeconds(time);
         loopSound.Play();
+        swoosh.Play();
+        soundsphere.SetActive(true); 
     }
 
 	void Start () {

@@ -31,6 +31,8 @@ public class AudioTile : MonoBehaviour {
         {
             audioSource.Play();
             gameObject.GetComponent<Renderer>().material.color = Color.green;
+            
+            gameObject.GetComponent<ParticleSystem>().Play();
         }
 
     }
